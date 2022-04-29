@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #252525;
+  color: white;
+  font-family: 'Red Hat Mono', monospace;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+#block {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.header, .credits {
+  max-width: 1281px;
+  margin: 0 auto;
+}
+.header h1 {
+    font-size: 48px;
+    width: 100%;
+    display: block;
+    line-height: 1;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+.header h2, #legend h2 {
+    width: 100%;
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.header h1 > * {
+  color: #ED677F;
+}
+h2 a {
+    color: white;
+}
+h2 a:hover, .credits a:hover {
+    color: #ED677F;
+}
+p {
+  width: 80%;
+}
+.button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid white;
+    font-size: 16px;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    margin: 6px 12px;
+}
+.button:hover {
+    border: 1px solid #ED677F;
+    background: #ED677F;
+    color: white;
+}
+#block {
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);;
+}
+.years {
+  margin: 20px 0;
+}
+.card {
+  width: 400px;
+  height: 252.1px;
+  /* margin: 10px; */
+  position: relative;
+  display: block;
+  background-image: url(../svg/bg4.svg);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+.mainlist {
+  width: 39px;
+  height: 184px;
+  background-image: url(../svg/mainlist3.svg);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 45.5%;
+  bottom: 24%;
+  transform-origin: center bottom;
+  overflow: hidden;
+  transform: rotate(calc(15deg * var(--i)));
+}
+.mainlist:hover {
+  background-image: url(../svg/mainlisthover.svg);
+  z-index: 20;
+  transition: all .2s;
+  cursor: pointer;
+}
+.menu {
+  cursor: default;
+  width: 400px;
+  height: 252.1px;
+  margin: 20px;
+  transition: all .8s;
+  order: -1;
+  /* z-index: 101;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 238px); */
+}
+.blocker {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #252525;
+    transition: all .8s;
+    z-index: 100;
+}
+.country {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  font-size: 21px;
+  font-weight: bold;
+}
+.all {
+  overflow-y: scroll;
+  height: 100%;
+}
+.all .allstars {
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: calc(100% - 460px);
+  height: 100%;
+  margin: 0 20px;
+}
+.info {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 200;
+  margin: 20px;
+}
+.star {
+  background-image: url("../svg/bg-circle.svg");
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 200;
+  transform: rotate(-90deg);
+}
+.star .eco {
+  background-position: left bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 50%;
+  transform: rotate(-90deg);
+}
+.star .heal {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 50%;
+  height: 50%;
+  transform: rotate(90deg);
+}
+.star .pol {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 50%;
+  height: 50%;
+  transform: rotate(180deg);
+}
+.star .edu {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 50%;
+  height: 50%;
+}
+.star p {
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
+  color: #eee;
+}
+.eco p {
+  transform: rotate(180deg);
+}
+.edu p {
+  transform: rotate(90deg);
+}
+.pol p {
+  transform: rotate(-90deg);
+}
+.cross {
+  display: block;
+  position: absolute;
+  z-index: 300;
+  background: url('../svg/cross.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 1%;
+  right: 1%;
+  cursor: pointer;
+}
+.hidden {
+    opacity: 0;
+}
+.closed {
+    display: none;
+}
+.overflow {
+  overflow: hidden;
+}
+/* .legend {
+  width: 595px;
+  height: 375px;
+  margin: 20px;
+  transition: all .8s;
+}
+#legend .mainlist {
+  background-size: 100% 25%;
+}
+#legend .card {
+  background-image: url('../svg/legend2.svg');
+} */
+.smlegend {
+  width: 400px;
+  height: 439.44px;
+  background-image: url('../svg/small-legend.svg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: all .8s;
+}
+@media all and (max-width: 1679px) {
+  #block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  .header, .credits {
+      margin: 0 1rem;
+  }
+}
+@media all and (max-width: 1210px) {
+  #block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .header, .credits {
+        margin: 0 1rem;
+    }
+}
+@media all and (max-width: 800px) {
+  #block {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .header, .credits {
+        margin: 0 1rem;
+    }
+}
