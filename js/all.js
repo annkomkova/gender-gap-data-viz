@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $.ajax({
     type: "GET",
-    url: "https://raw.githubusercontent.com/annkomkova/gggi2021/main/data/gggi_all.csv",
+    url: "https://raw.githubusercontent.com/annkomkova/gender-gap-data-viz/main/data/gggi_all.csv",
     dataType: "text",
     success: function(data) {
       processData(data);
@@ -175,7 +175,7 @@ function processData(allText) {
       let allstars = prediv + '"allstars hidden closed">' + stars06 + stars07 + stars08 + stars09 + stars10 + stars11 + stars12 + stars13 + stars14 + stars15+ stars16 + stars17 + stars18 + stars20 + stars21 +'</div>';
 
       //сбор визуализации
-
+      let legend = prediv+'"legend">'+'</div>';
       let dataviz = $(prediv+'"years">').html(allstars+prediv+'"card">'+prediv+'"mainlist"'+prop6+prediv+'"mainlist"'+prop7+prediv+'"mainlist"'+prop8+prediv+'"mainlist"'+prop9+prediv+'"mainlist"'+prop10+prediv+'"mainlist"'+prop11+prediv+'"mainlist"'+prop12+prediv+'"mainlist"'+prop13+prediv+'"mainlist"'+prop14+prediv+'"mainlist"'+prop15+prediv+'"mainlist"'+prop16+prediv+'"mainlist"'+prop17+prediv+'"mainlist"'+prop18+prediv+'"mainlist"'+prop20+prediv+'"mainlist list2021"'+prop21+prediv+'"country"/><h1>'+data[0]+'</h1></div></div>');
 
       // вывод карточек
@@ -190,18 +190,17 @@ function processData(allText) {
     $('.mainlist').click(function(){
       $('body').addClass('overflow');
       $('.blocker.hidden, .allstars.hidden, .smlegend').removeClass('closed');
-      $('#block, #legend, .header').addClass('hidden closed');
+      $('#block, .header').addClass('hidden closed');
 
       $(this).parent().addClass('menu');
       $(this).parent().parent().addClass('all');
       setTimeout(function(){
         $('.blocker, .smlegend, .allstars').removeClass('hidden');
       }, 50);
-      $('.blocker').prepend($('.menu'));
       $('.blocker').prepend($('.all'));
-
+      $('.blocker').prepend($('.legend'));
+      $('.legend').prepend($('.menu, .smlegend'));
     });
-
     $('.cross').click(function (){
       $('body').removeClass('overflow')
       setTimeout(function(){
@@ -210,11 +209,11 @@ function processData(allText) {
       }, 600);
       setTimeout(function(){
         $('.blocker, .smlegend, .allstars').addClass('closed');
-        $('#block, #legend, .header').removeClass('closed');
+        $('#block, .header').removeClass('closed');
       }, 800);
       setTimeout(function(){
         $('.blocker, .allstars').addClass('hidden');
-        $('#block, #legend, .header').removeClass('hidden');
+        $('#block, .header').removeClass('hidden');
       }, 100);
     });
   }
