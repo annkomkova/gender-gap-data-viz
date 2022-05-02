@@ -287,3 +287,8 @@ p {
         margin: 0 1rem;
     }
 }
+/* @media all and (max-width: 680px) {
+  .blocker {
+    flex-direction: row;
+  }
+} */
