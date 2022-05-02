@@ -9,13 +9,27 @@ body {
   max-width: 1680px;
   margin: 0 auto;
 }
-#block {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .header, .credits {
-  max-width: 1281px;
   margin: 0 auto;
+  width: 90%;
+}
+.mainlegend {
+  /* background-image: url('../svg/legend.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%; */
+  width: 400px;
+  height: 397.51px;
+}
+.mainlegend img {
+  width: inherit;
+  height: inherit;
 }
 .header h1 {
     font-size: 48px;
@@ -53,7 +67,7 @@ p {
     border-radius: 4px;
     position: relative;
     display: inline-block;
-    margin: 6px 12px;
+    margin-top: 40px;
 }
 .button:hover {
     border: 1px solid #ED677F;
@@ -61,14 +75,12 @@ p {
     color: white;
 }
 #block {
-  /* display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);;
 }
 .years {
   margin: 20px 0;
+  width: calc(100% - 460px);
 }
 .card {
   width: 400px;
@@ -146,7 +158,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: calc(100% - 460px);
+  width: 100%;
   height: 100%;
   margin: 0 20px;
 }
@@ -287,8 +299,15 @@ p {
         margin: 0 1rem;
     }
 }
-/* @media all and (max-width: 680px) {
+@media all and (max-width: 680px) {
   .blocker {
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-} */
+  .years {
+    width: 100%;
+  }
+  .legend {
+    width: 100%;
+  }
+}
