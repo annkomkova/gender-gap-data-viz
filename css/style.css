@@ -57,6 +57,7 @@ h2 a:hover, .credits a:hover {
 }
 p {
   width: 80%;
+  font-size: 16px;
 }
 .button {
     color: white;
@@ -74,7 +75,7 @@ p {
     background: #ED677F;
     color: white;
 }
-#block {
+.block {
   display: grid;
   grid-template-columns: repeat(4, 1fr);;
 }
@@ -129,13 +130,14 @@ p {
     justify-content: center;
     position: absolute;
     width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     background: #252525;
     transition: all .8s;
-    z-index: 500;
+    z-index: 900;
 }
 .country {
   position: absolute;
@@ -273,30 +275,37 @@ p {
   transition: all .8s;
 }
 @media all and (max-width: 1679px) {
-  #block {
+  .block {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
   .header, .credits {
       margin: 0 1rem;
+      width: 95%;
   }
 }
 @media all and (max-width: 1210px) {
-  #block {
+  .block {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
     .header, .credits {
         margin: 0 1rem;
+        width: 95%;
     }
 }
 @media all and (max-width: 800px) {
-  #block {
+  .block {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
     }
     .header, .credits {
         margin: 0 1rem;
+        width: 95%;
+    }
+    .header {
+      flex-direction: column;
+      align-items: center;
     }
 }
 @media all and (max-width: 680px) {

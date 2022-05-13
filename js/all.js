@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 function processData(allText) {
   let allTextLines = allText.split(/\r\n|\n/);
-  let mainblock = $("#block");
+  let mainblock = $(".block");
 
   for (let i = 1; i < (parseInt(allTextLines.length) - 1); i++) {
       let mblock = $('.mainblock');
@@ -190,7 +190,7 @@ function processData(allText) {
     $('.mainlist').click(function(){
       $('body').addClass('overflow');
       $('.blocker.hidden, .allstars.hidden, .smlegend').removeClass('closed');
-      $('#block, .header').addClass('hidden closed');
+      $('.block, .header').addClass('hidden closed');
 
       $(this).parent().addClass('menu');
       $(this).parent().parent().addClass('all');
@@ -209,11 +209,11 @@ function processData(allText) {
       }, 600);
       setTimeout(function(){
         $('.blocker, .smlegend, .allstars').addClass('closed');
-        $('#block, .header').removeClass('closed');
+        $('.block, .header').removeClass('closed');
       }, 800);
       setTimeout(function(){
         $('.blocker, .allstars').addClass('hidden');
-        $('#block, .header').removeClass('hidden');
+        $('.block, .header').removeClass('hidden');
       }, 100);
     });
   }
