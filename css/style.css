@@ -322,7 +322,7 @@ p {
 }
 @media all and (max-width: 480px) {
   .blocker {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   .overflow {
