@@ -14,48 +14,48 @@ function processData(allText) {
   let mainblock = $(".block");
 
   for (let i = 1; i < (parseInt(allTextLines.length) - 1); i++) {
-      let mblock = $('.mainblock');
-      let prediv = '<div class=';
-      let prea = '<a class=';
-      let linkdata = 'target="_blank"  href="';
-      let bsize = 'style="background-size: ';
-      let data = allTextLines[i].split(',');
-      let bg = '%; background-image: url(svg/'+data[3]+'-mainlist.svg);';
-      let typeoflist = 'background-image: url(svg/ray.svg);'
+      let mblock = $('.mainblock'),
+          prediv = '<div class=',
+          prea = '<a class=',
+          linkdata = 'target="_blank"  href="',
+          bsize = 'style="background-size: ',
+          data = allTextLines[i].split(','),
+          bg = '%; background-image: url(svg/'+data[3]+'-mainlist.svg);',
+          typeoflist = 'background-image: url(svg/ray.svg);'
 
       //счётчик для поворотов
-      let cnt06 = '--i: -7;';
-      let cnt07 = '--i: -6;';
-      let cnt08 = '--i: -5;';
-      let cnt09 = '--i: -4;';
-      let cnt10 = '--i: -3;';
-      let cnt11 = '--i: -2;';
-      let cnt12 = '--i: -1;';
-      let cnt13 = '--i: ;0';
-      let cnt14 = '--i: 1;';
-      let cnt15 = '--i: 2;';
-      let cnt16 = '--i: 3;';
-      let cnt17 = '--i: 4;';
-      let cnt18 = '--i: 5;';
-      let cnt20 = '--i: 6;';
-      let cnt21 = '--i: 7;';
+      let cnt06 = '--i: -7;',
+          cnt07 = '--i: -6;',
+          cnt08 = '--i: -5;',
+          cnt09 = '--i: -4;',
+          cnt10 = '--i: -3;',
+          cnt11 = '--i: -2;',
+          cnt12 = '--i: -1;',
+          cnt13 = '--i: 0;',
+          cnt14 = '--i: 1;',
+          cnt15 = '--i: 2;',
+          cnt16 = '--i: 3;',
+          cnt17 = '--i: 4;',
+          cnt18 = '--i: 5;',
+          cnt20 = '--i: 6;',
+          cnt21 = '--i: 7;';
 
       //визуализации по всем годам для стран
-      let prop6 = bsize+'100% '+data[34]*100+bg+cnt06+'"/></div>';
-      let prop7 = bsize+'100% '+data[32]*100+bg+cnt07+'"/></div>';
-      let prop8 = bsize+'100% '+data[30]*100+bg+cnt08+'"/></div>';
-      let prop9 = bsize+'100% '+data[28]*100+bg+cnt09+'"/></div>';
-      let prop10 = bsize+'100% '+data[26]*100+bg+cnt10+'"/></div>';
-      let prop11 = bsize+'100% '+data[24]*100+bg+cnt11+'"/></div>';
-      let prop12 = bsize+'100% '+data[22]*100+bg+cnt12+'"/></div>';
-      let prop13 = bsize+'100% '+data[20]*100+bg+cnt13+'"/></div>';
-      let prop14 = bsize+'100% '+data[18]*100+bg+cnt14+'"/></div>';
-      let prop15 = bsize+'100% '+data[16]*100+bg+cnt15+'"/></div>';
-      let prop16 = bsize+'100% '+data[14]*100+bg+cnt16+'"/></div>';
-      let prop17 = bsize+'100% '+data[12]*100+bg+cnt17+'"/></div>';
-      let prop18 = bsize+'100% '+data[10]*100+bg+cnt18+'"/></div>';
-      let prop20 = bsize+'100% '+data[8]*100+bg+cnt20+'"/></div>';
-      let prop21 = bsize+'100% '+data[6]*100+bg+cnt21+'"/></div>';
+      let prop6 = bsize+'100% '+data[34]*100+bg+cnt06+'"/></div>',
+          prop7 = bsize+'100% '+data[32]*100+bg+cnt07+'"/></div>',
+          prop8 = bsize+'100% '+data[30]*100+bg+cnt08+'"/></div>',
+          prop9 = bsize+'100% '+data[28]*100+bg+cnt09+'"/></div>',
+          prop10 = bsize+'100% '+data[26]*100+bg+cnt10+'"/></div>',
+          prop11 = bsize+'100% '+data[24]*100+bg+cnt11+'"/></div>',
+          prop12 = bsize+'100% '+data[22]*100+bg+cnt12+'"/></div>',
+          prop13 = bsize+'100% '+data[20]*100+bg+cnt13+'"/></div>',
+          prop14 = bsize+'100% '+data[18]*100+bg+cnt14+'"/></div>',
+          prop15 = bsize+'100% '+data[16]*100+bg+cnt15+'"/></div>',
+          prop16 = bsize+'100% '+data[14]*100+bg+cnt16+'"/></div>',
+          prop17 = bsize+'100% '+data[12]*100+bg+cnt17+'"/></div>',
+          prop18 = bsize+'100% '+data[10]*100+bg+cnt18+'"/></div>',
+          prop20 = bsize+'100% '+data[8]*100+bg+cnt20+'"/></div>',
+          prop21 = bsize+'100% '+data[6]*100+bg+cnt21+'"/></div>';
 
       //мини-визуализации по годам
       let eco21 = bsize+data[35]*100+'%;'+typeoflist+'" /><p>'+(data[35]*100).toFixed(2)+'%;</p>';
