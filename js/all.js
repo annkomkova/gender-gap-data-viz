@@ -157,22 +157,22 @@ function processData(allText) {
       let info07 = star+eco+eco07+'</div>'+edu+edu07+'</div>'+pol+pol07+'</div>'+heal+heal07+'</div></div>';
       let info06 = star+eco+eco06+'</div>'+edu+edu06+'</div>'+pol+pol06+'</div>'+heal+heal06+'</div></div>';
 
-      let stars06 = prediv + '"info star06">' + info06 +'<h2>2006</h2></div>';
-      let stars07 = prediv + '"info star07">' + info07 +'<h2>2007</h2></div>';
-      let stars08 = prediv + '"info star08">' + info08 +'<h2>2008</h2></div>';
-      let stars09 = prediv + '"info star09">' + info09 +'<h2>2009</h2></div>';
-      let stars10 = prediv + '"info star10">' + info10 +'<h2>2010</h2></div>';
-      let stars11 = prediv + '"info star11">' + info11 +'<h2>2011</h2></div>';
-      let stars12 = prediv + '"info star12">' + info12 +'<h2>2012</h2></div>';
-      let stars13 = prediv + '"info star13">' + info13 +'<h2>2013</h2></div>';
-      let stars14 = prediv + '"info star14">' + info14 +'<h2>2014</h2></div>';
-      let stars15 = prediv + '"info star15">' + info15 +'<h2>2015</h2></div>';
-      let stars16 = prediv + '"info star16">' + info16 +'<h2>2016</h2></div>';
-      let stars17 = prediv + '"info star17">' + info17 +'<h2>2017</h2></div>';
-      let stars18 = prediv + '"info star18">' + info18 +'<h2>2018</h2></div>';
-      let stars20 = prediv + '"info star20">' + info20 +'<h2>2020</h2></div>';
-      let stars21 = prediv + '"info star21">' + info21 +'<h2>2021</h2></div>';
-      let allstars = prediv + '"allstars hidden closed">' + stars06 + stars07 + stars08 + stars09 + stars10 + stars11 + stars12 + stars13 + stars14 + stars15+ stars16 + stars17 + stars18 + stars20 + stars21 +'</div>';
+      let stars06 = prediv + '"info star06">' + info06 +'<h2>2006</h2></div>',
+          stars07 = prediv + '"info star07">' + info07 +'<h2>2007</h2></div>',
+          stars08 = prediv + '"info star08">' + info08 +'<h2>2008</h2></div>',
+          stars09 = prediv + '"info star09">' + info09 +'<h2>2009</h2></div>',
+          stars10 = prediv + '"info star10">' + info10 +'<h2>2010</h2></div>',
+          stars11 = prediv + '"info star11">' + info11 +'<h2>2011</h2></div>',
+          stars12 = prediv + '"info star12">' + info12 +'<h2>2012</h2></div>',
+          stars13 = prediv + '"info star13">' + info13 +'<h2>2013</h2></div>',
+          stars14 = prediv + '"info star14">' + info14 +'<h2>2014</h2></div>',
+          stars15 = prediv + '"info star15">' + info15 +'<h2>2015</h2></div>',
+          stars16 = prediv + '"info star16">' + info16 +'<h2>2016</h2></div>',
+          stars17 = prediv + '"info star17">' + info17 +'<h2>2017</h2></div>',
+          stars18 = prediv + '"info star18">' + info18 +'<h2>2018</h2></div>',
+          stars20 = prediv + '"info star20">' + info20 +'<h2>2020</h2></div>',
+          stars21 = prediv + '"info star21">' + info21 +'<h2>2021</h2></div>',
+          allstars = prediv + '"allstars hidden closed">' + stars06 + stars07 + stars08 + stars09 + stars10 + stars11 + stars12 + stars13 + stars14 + stars15+ stars16 + stars17 + stars18 + stars20 + stars21 +'</div>';
 
       //сбор визуализации
       let legend = prediv+'"legend">'+'</div>';
